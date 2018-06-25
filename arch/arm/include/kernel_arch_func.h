@@ -77,10 +77,13 @@ _arch_switch_to_main_thread(struct k_thread *main_thread,
 	__asm__ __volatile__(
 
 		/* move to main() thread stack */
+#if defined(CONFIG_CPU_CORTEX_M)
 		"msr PSP, %0 \t\n"
+#endif
 
 		/* unlock interrupts */
-#if defined(CONFIG_ARMV6_M_ARMV8_M_BASELINE)
+#if defined(CONFIG_ARMV6_M_ARMV8_M_BASELINE) \
+		|| defined(CONFIG_ARMV7_R)
 		"cpsie i \t\n"
 #elif defined(CONFIG_ARMV7_M_ARMV8_M_MAINLINE)
 		"cpsie if \t\n"
