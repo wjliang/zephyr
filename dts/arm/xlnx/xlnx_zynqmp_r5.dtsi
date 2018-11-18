@@ -1,0 +1,26 @@
+
+#include <arm/xlnx/xlnx_zynqmp.dtsi>
+
+/{
+	cpus {
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		cpu@0 {
+			device_type = "cpu";
+			compatible = "arm,cortex-r5";
+			reg = <0>;
+		};
+	};
+
+	soc {
+		interrupt-parent = <&core_intc>;
+
+		core_intc: interrupt-controller@f9000000 {
+			compatible = "arm,gic";
+			#interrupt-cells = <2>;
+			interrupt-controller;
+			reg = <0xF9000000 0x1000>, <0xF9001000 0x1000>;
+		};
+	};
+};
