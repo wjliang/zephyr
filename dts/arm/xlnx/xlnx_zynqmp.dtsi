@@ -1,0 +1,55 @@
+/{
+	soc {
+		compatible = "simple-bus";
+		#address-cells = <1>;
+		#size-cells = <1>;
+		ranges;
+
+		uart0: serial@ff000000 {
+			compatible = "xlnx,xuartps";
+			status = "disabled";
+			reg = <0xff000000 0x1000>;
+			label = "uart0";
+			interrupts = <0 21>;
+		};
+
+		uart1: serial@ff010000 {
+			compatible = "xlnx,xuartps";
+			status = "disabled";
+			reg = <0xff010000 0x1000>;
+			label = "uart1";
+		};
+
+		ttc0: timer@ff110000 {
+			compatible = "cdns,ttc";
+			status = "disabled";
+			interrupts = <0 36>, <0 37>, <0 38>;
+			reg = <0xff110000 0x1000>;
+			label = "ttc0";
+		};
+
+		ttc1: timer@ff120000 {
+			compatible = "cdns,ttc";
+			status = "disabled";
+			interrupts = <0 39>, <0 40>, <0 41>;
+			reg = <0xff120000 0x1000>;
+			label = "ttc1";
+		};
+
+		ttc2: timer@ff130000 {
+			compatible = "cdns,ttc";
+			status = "disabled";
+			interrupts = <0 42>, <0 43>, <0 44>;
+			reg = <0xff130000 0x1000>;
+			label = "ttc2";
+		};
+
+		ttc3: timer@ff140000 {
+			compatible = "cdns,ttc";
+			status = "disabled";
+			interrupts = <0 45>, <0 46>, <0 47>;
+			reg = <0xff140000 0x1000>;
+			label = "ttc3";
+		};
+	};
+};
