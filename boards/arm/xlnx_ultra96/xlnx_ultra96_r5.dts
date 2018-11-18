@@ -1,0 +1,49 @@
+/*
+ * Copyright (c) 2017 Linaro Limited
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/dts-v1/;
+
+#include <xlnx/xlnx_zynqmp_r5.dtsi>
+
+/ {
+	model = "Xilinx Ultra96 RPU";
+	compatible = "xlnx,xlnx-zynqmp-r5";
+	#address-cells = <1>;
+	#size-cells = <1>;
+
+	chosen {
+		zephyr,console = &uart1;
+		zephyr,sram = &sram0;
+	};
+
+	aliases {
+		uart-1 = &uart1;
+	};
+
+	soc {
+		sram0: memory@0 {
+			reg = <0 0x10000>;
+		};
+	};
+
+};
+
+&uart0 {
+	current-speed = <115200>;
+	clock-frequency = <99999901>;
+};
+
+&uart1 {
+	current-speed = <115200>;
+	clock-frequency = <99999901>;
+	status = "ok";
+};
+
+
+&ttc0 {
+	status = "ok";
+	clock-frequency = <100000000>;
+};

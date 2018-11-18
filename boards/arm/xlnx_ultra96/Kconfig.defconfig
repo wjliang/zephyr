@@ -1,0 +1,15 @@
+# Kconfig - 96Boards Carbon nRF51 board default configuration
+#
+# Copyright (c) 2016, 2017 Linaro Limited.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+if BOARD_XLNX_ULTRA96_R5
+
+config BOARD
+	default "xlnx_ultra96_r5"
+
+config SOC_FAMILY_CPU
+	default "cortex_r5"
+
+endif # BOARD_XLNX_ULTRA96_R5

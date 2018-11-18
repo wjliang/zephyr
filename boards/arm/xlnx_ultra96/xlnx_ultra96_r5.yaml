@@ -1,0 +1,12 @@
+identifier: xlnx_ultra96_r5
+name: Xilinx Ultra96 R5
+type: mcu
+arch: arm
+ram: 64
+flash: 256
+toolchain:
+  - zephyr
+  - gnuarmemb
+testing:
+  ignore_tags:
+    - net

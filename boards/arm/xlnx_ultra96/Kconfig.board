@@ -1,0 +1,8 @@
+# Kconfig - Xilinx Ultra96 board configuration
+#
+# Copyright (c) 2018 Xilinx Inc.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+config BOARD_XLNX_ULTRA96_R5
+	bool "Xilinx Ultra96 R5"
