@@ -1,0 +1,19 @@
+# Kconfig - Xilinx ZynqMP platform configuration options
+
+#
+# Copyright (c) 2018 Xilinx, Inc.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+config SOC_FAMILY_ZYNQMP
+	bool "Xilinx ZynqMP family"
+
+if SOC_FAMILY_ZYNQMP
+config SOC_FAMILY
+	string
+	default "xlnx_zynqmp"
+
+config SOC_FAMILY_CPU
+	string "Xilinx ZynqMP CPU Type"
+endif

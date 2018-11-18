@@ -1,0 +1,16 @@
+# Kconfig - TI LM3S6965 platform configuration options
+
+#
+# Copyright (c) 2014-2015 Wind River Systems, Inc.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+if SOC_FAMILY_ZYNQMP
+
+config SOC
+	default "xlnx_zynqmp"
+
+endif # SOC_FAMILY_ZYNQMP
+
+source "soc/arm/xlnx_zynqmp/*/Kconfig.defconfig.soc"

@@ -1,0 +1,12 @@
+# Kconfig - ST Microelectronics STM32F2X MCU series
+#
+# Copyright (c) 2018 qianfan Zhao <qianfanguijin@163.com>
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+config SOC_XLNX_ZYNQMP_R5
+	bool "Xilinx ZynqMP family RPU"
+	select CPU_CORTEX_R5
+	help
+	  Enable support for Xilinx ZynqMP R5

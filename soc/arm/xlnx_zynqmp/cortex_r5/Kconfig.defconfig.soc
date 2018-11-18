@@ -1,0 +1,24 @@
+# Kconfig - ST Microelectronics STM32F2 MCU line
+#
+# Copyright (c) 2018 qianfan Zhao <qianfanguijin@163.com>
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+if SOC_XLNX_ZYNQMP_R5
+config NUM_IRQS
+	int
+	# must be >= the highest interrupt number used
+	# - include the UART interrupts
+	default 195
+
+if SERIAL
+config UART_XLNX_PS
+	default y
+
+endif # SERIAL
+
+config XLNX_PSTTC_TIMER
+	default y
+
+endif # SOC_XLNX_ZYNQMP_R5
