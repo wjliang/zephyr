@@ -21,4 +21,7 @@ endif # SERIAL
 config XLNX_PSTTC_TIMER
 	default y
 
+config XLNX_SCUGIC
+	default y
+
 endif # SOC_XLNX_ZYNQMP_R5
