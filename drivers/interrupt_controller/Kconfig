@@ -165,6 +165,11 @@ config GIC
 	help
 	  The ARM Generic Interrupt Controller works with Cortex-A and
 	  Cortex-R processors.
+config XLNX_SCUGIC
+	bool "ARM Generic Interrupt Controller (GIC)"
+	default n
+	help
+	  The Xilinx SoC ARM Interrupt Controller works with Cortex-R5.
 
 source "drivers/interrupt_controller/Kconfig.stm32"
 
