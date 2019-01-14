@@ -1,0 +1,39 @@
+#
+# Copyright (c) 2018 Marvell
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+---
+title: PL390 Interrupt Controller on Xilinx SoC
+version: 0.1
+
+description: >
+    This binding describes the PL390 Interrupt Controller on Xilinx SoC.
+
+properties:
+    compatible:
+      category: required
+      type: string
+      description: compatible strings
+      constraint: "xlnx,scugic"
+      generation: define
+
+    reg:
+      category: required
+      type: int
+      description: mmio register space
+      generation: define
+
+    label:
+      category: required
+      type: string
+      description: Human readable string describing the device (used by Zephyr for API name)
+      generation: define
+
+cell_string: IRQ
+
+"#cells":
+  - irq
+  - priority
+  - flags
+...
