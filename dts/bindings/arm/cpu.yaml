@@ -1,0 +1,39 @@
+#
+# Copyright (c) 2018 Marvell
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+---
+title: CPU
+version: 0.1
+
+description: >
+    This binding describes CPU
+
+properties:
+    compatible:
+      category: required
+      type: string
+      description: compatible strings
+      constraint: "arm,cortex-r5"
+      generation: define
+
+    reg:
+      category: required
+      type: int
+      description: mmio register space
+      generation: define
+
+    label:
+      category: required
+      type: string
+      description: Human readable string describing the device (used by Zephyr for API name)
+      generation: define
+
+cell_string: IRQ
+
+"#cells":
+  - cpu_id
+  - priority
+  - flags
+...
