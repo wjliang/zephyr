@@ -17,7 +17,7 @@
 		interrupt-parent = <&core_intc>;
 
 		core_intc: interrupt-controller@f9000000 {
-			compatible = "arm,gic";
+			compatible = "xlnx,scugic";
 			#interrupt-cells = <2>;
 			interrupt-controller;
 			reg = <0xF9000000 0x1000>, <0xF9001000 0x1000>;
