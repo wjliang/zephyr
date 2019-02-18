@@ -12,6 +12,21 @@ config NUM_IRQS
 	# - include the UART interrupts
 	default 195
 
+config MULTI_LEVEL_INTERRUPTS
+	default y
+
+config 2ND_LEVEL_INTERRUPTS
+	default y
+
+config NUM_2ND_LEVEL_AGGREGATORS
+	default 1
+
+config MAX_IRQ_PER_AGGREGATOR
+	default 255
+
+config 2ND_LVL_INTR_00_OFFSET
+	default 0
+
 if SERIAL
 config UART_XLNX_PS
 	default y
